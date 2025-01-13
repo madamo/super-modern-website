@@ -29,12 +29,11 @@ header {
     justify-content: space-between;
     align-items: center;
     flex: 0 1 auto;
-    border: 1px solid purple;
     
 }
 
 header > * {
-   border: 1px solid red;
+   /*border: 1px solid red;*/
 
     i {
         margin-right: 10px;
@@ -97,7 +96,7 @@ nav {
 
 
 #search-container {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-evenly;
     position: absolute;
@@ -161,7 +160,6 @@ nav {
 }
 
 #menu {
-    border: 1px solid gold;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -212,9 +210,177 @@ nav {
 
 }
 
+
+
 /* Hero Content */
+
 #hero-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    width: 100%;
     margin-top: 5%;
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    #hero-img-container {
+        background-color: lightgrey;
+        height: 500px;
+        padding: 0 0 0 10px;
+    }
+
+    #supporting-text {
+        margin: 20px 0;
+        font-size: 1.5rem;
+    }
+    
+    #button-container {
+        margin: 15px 0;
+    }
+
+    button {
+        font-size: 0.875rem;
+        width: 40%;
+    }
+}
+
+/* Logo Wall */
+
+#logo-wall {
+    display: flex; 
+    flex-direction: column;
+
+    margin-top: 100px;
+    position: relative; /* this is if we want some sort of border */
+
+    h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    #logo-container {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+    }
+
+    .logo-carousel {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        /*animation: scroll-logos infinite 35s linear;*/
+
+        img {
+            height: 50px;
+            width: auto;
+            padding: 0 50px;
+        }
+    }
+    
+}
+
+/*#logo-wall:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255,255,255, 0), white);
+    content: "";
+    z-index: 2
+}*/
+
+
+/* Feature Section */
+/*
+#features {
+    border: 1px solid red;
+    margin-top: 50px;
+    height: 400px;
+}
+
+.feature {
+    border: 1px solid purple;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    align-items: center;
+
+    .feature-img-container {
+        border: 1px solid blue;
+        position: sticky;
+        height: 400px;
+        display: flex;
+        align-items: center;
+    }
+    
+
+    .feature-img {
+        width: 70%;
+        height: 350px;
+        background-color: lightblue;
+        display: inline-block;
+        position: relative;
+        left: 20%;
+
+    }
+
+    .feature-bg {
+        background-color: aquamarine;
+        width: 50%;
+        height: 100%;
+        right: 0;
+        display: inline;
+        position: absolute;
+    }
+}*/
+
+#features {
+    border: 1px solid red;
+    margin-top: 50px;
+    display: flex;
+    height: 1600px;
+}
+
+#feature-text-column {
+    width: 50%;
+}
+
+.feature {
+    margin: 20px 0;
+    height: 400px;
+}
+
+#feature-img-column {
+    position: sticky;
+    width: 50%;
+    height: 400px;
+    top: 20px;
+    border: 1px solid purple;
+    background-color: lightpink;
+    transition: .5s linear;
+}
+
+.feature-img {
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    border: 1px solid black;
+}
+
+
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
 
@@ -259,7 +425,6 @@ nav {
     #menu-icon {
         display: flex;
         justify-content: center;
-        border: 1px solid purple;
         width: 1.5rem;
 
         .fa-bars {
@@ -274,6 +439,22 @@ nav {
         width: 77%;
     }
 
+    #hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    #logo-wall {
+
+        h2 {
+            font-size: 1.1rem;
+        }
+    
+        .logo-carousel {
+            img {
+                height: 30px;
+            }
+        }
+    }
 }
 
 
