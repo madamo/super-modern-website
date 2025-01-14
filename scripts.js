@@ -1,11 +1,18 @@
+
+// Search Elements
 const searchIcon = document.getElementById("search-icon");
 const searchContainer = document.getElementById("search-container");
 const closeSearch = document.getElementById("close-search");
+
+// Menu Elements
 const showMenu = document.getElementById("menu-icon");
 const menu = document.getElementById("menu");
 const closeMenu = document.getElementById("close-menu");
+
+// Feature Scroll Elements
 const featureContainer = document.getElementById("features");
-const featureImgBg = document.getElementById("feature-img-column"); // will eventually need to change this
+const featureImgBg = document.getElementById("feature-img-bg"); // will eventually need to change this
+const featureImages = document.getElementsByClassName("feature-img")
 
 
 searchIcon.addEventListener("click", () => {
@@ -25,16 +32,41 @@ closeMenu.addEventListener("click", () => {
     // TO-DO: Make sure this is hidden from screen readers
 })
 
+//TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
 document.addEventListener("scroll", (event) => {
     console.log(window.scrollY);
-    if (window.scrollY > 1160) {
-        featureImgBg.style.backgroundColor = "green"
-    } else {
+    if (window.scrollY > 0 && window.scrollY < 1159) {
         featureImgBg.style.backgroundColor = "lightpink"
+        featureImages[0].classList.add("show-feature-img")
+        featureImages[1].classList.remove("show-feature-img")
+        console.log("img1")
+    } else if (window.scrollY > 1160 && window.scrollY < 1600) {
+        featureImgBg.style.backgroundColor = "green"
+        featureImages[1].classList.add("show-feature-img")
+        featureImages[0].classList.remove("show-feature-img")
+        featureImages[2].classList.remove("show-feature-img")
+
+        console.log("img2")
+
+    } else if (window.scrollY > 1601 && window.scrollY < 1900) {
+        featureImgBg.style.backgroundColor = "lightseagreen"
+        featureImages[2].classList.add("show-feature-img")
+        featureImages[1].classList.remove("show-feature-img")
+        featureImages[3].classList.remove("show-feature-img")
+        console.log("img3")
+
+    } else if (window.scrollY > 1901) {
+        featureImgBg.style.backgroundColor = "lightcyan"
+        featureImages[3].classList.add("show-feature-img")
+        featureImages[2].classList.remove("show-feature-img")
+
+        console.log("img4")
 
     }
 
 })
+
+console.log(featureImages);
 
 /*featureContainer.addEventListener("scroll", (event) => {
     //alert("scrolling!");
