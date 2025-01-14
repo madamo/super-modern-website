@@ -13,6 +13,10 @@ const closeMenu = document.getElementById("close-menu");
 const featureContainer = document.getElementById("features");
 const featureImgBg = document.getElementById("feature-img-bg"); // will eventually need to change this
 const featureImages = document.getElementsByClassName("feature-img")
+const featureContainerTop = featureContainer.offsetTop;
+// TO-DO: get the height of a feature element to use as an offset
+
+//console.log(`feature section top: ${featureContainer.offsetTop}`);
 
 
 searchIcon.addEventListener("click", () => {
@@ -35,7 +39,7 @@ closeMenu.addEventListener("click", () => {
 //TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
 document.addEventListener("scroll", (event) => {
     console.log(window.scrollY);
-    if (window.scrollY > 0 && window.scrollY < 1159) {
+    if (window.scrollY > 0 && window.scrollY < 1159) { // compare scrollY to featureContainerTop
         featureImgBg.style.backgroundColor = "lightpink"
         featureImages[0].classList.add("show-feature-img")
         featureImages[1].classList.remove("show-feature-img")

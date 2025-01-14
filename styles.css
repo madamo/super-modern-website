@@ -391,8 +391,8 @@ div.feature:last-of-type {
     overflow: hidden;
 
     .feature-img {
+        /*border: 1px solid black;*/
         width: 80%;
-        border: 1px solid black;
         display: none;
         position: relative;
         margin-left: 10%;
