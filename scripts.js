@@ -15,7 +15,10 @@ const featureImgBg = document.getElementById("feature-img-bg"); // will eventual
 const featureImages = document.getElementsByClassName("feature-img")
 const featureContainerTop = featureContainer.offsetTop;
 const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight;
-// TO-DO: get the height of a feature element to use as an offset
+// TO-DO: reset offsets when window resizes
+
+// Check breakpoint
+const viewport = window.innerWidth;
 
 //console.log(`feature section top: ${featureContainer.offsetTop}`);
 console.log(`feature element height: ${featureOffset}`);
@@ -38,7 +41,9 @@ closeMenu.addEventListener("click", () => {
     // TO-DO: Make sure this is hidden from screen readers
 })
 
+// TO-DO: Only do this at the largest breakpoint
 //TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
+if (viewport > 1084) {
 document.addEventListener("scroll", (event) => {
     console.log(window.scrollY);
     if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset) { // compare scrollY to featureContainerTop
@@ -71,6 +76,7 @@ document.addEventListener("scroll", (event) => {
     }
 
 })
+}
 
 console.log(featureImages);
 
