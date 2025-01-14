@@ -343,7 +343,7 @@ nav {
     border: 1px solid red;
     margin-top: 50px;
     display: flex;
-    height: 1720px;
+    height: 2120px;
 }
 
 #feature-text-column {
@@ -351,13 +351,13 @@ nav {
 }
 
 .feature {
+     /*border: 1px solid gold;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 40px;
     padding: 0 20px;
-    height: 400px;
-    border: 1px solid gold;
+    height: 500px;
 
     .feature-text-container {
 
@@ -531,6 +531,7 @@ div.feature:last-of-type {
             }
         }
     }
+
 }
 
 

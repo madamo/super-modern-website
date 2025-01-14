@@ -14,9 +14,11 @@ const featureContainer = document.getElementById("features");
 const featureImgBg = document.getElementById("feature-img-bg"); // will eventually need to change this
 const featureImages = document.getElementsByClassName("feature-img")
 const featureContainerTop = featureContainer.offsetTop;
+const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight;
 // TO-DO: get the height of a feature element to use as an offset
 
 //console.log(`feature section top: ${featureContainer.offsetTop}`);
+console.log(`feature element height: ${featureOffset}`);
 
 
 searchIcon.addEventListener("click", () => {
@@ -39,12 +41,12 @@ closeMenu.addEventListener("click", () => {
 //TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
 document.addEventListener("scroll", (event) => {
     console.log(window.scrollY);
-    if (window.scrollY > 0 && window.scrollY < 1159) { // compare scrollY to featureContainerTop
+    if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset) { // compare scrollY to featureContainerTop
         featureImgBg.style.backgroundColor = "lightpink"
         featureImages[0].classList.add("show-feature-img")
         featureImages[1].classList.remove("show-feature-img")
         console.log("img1")
-    } else if (window.scrollY > 1160 && window.scrollY < 1600) {
+    } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)) {
         featureImgBg.style.backgroundColor = "green"
         featureImages[1].classList.add("show-feature-img")
         featureImages[0].classList.remove("show-feature-img")
@@ -52,14 +54,14 @@ document.addEventListener("scroll", (event) => {
 
         console.log("img2")
 
-    } else if (window.scrollY > 1601 && window.scrollY < 1900) {
+    } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)) {
         featureImgBg.style.backgroundColor = "lightseagreen"
         featureImages[2].classList.add("show-feature-img")
         featureImages[1].classList.remove("show-feature-img")
         featureImages[3].classList.remove("show-feature-img")
         console.log("img3")
 
-    } else if (window.scrollY > 1901) {
+    } else if (window.scrollY > featureContainerTop + (featureOffset*3)) {
         featureImgBg.style.backgroundColor = "lightcyan"
         featureImages[3].classList.add("show-feature-img")
         featureImages[2].classList.remove("show-feature-img")
