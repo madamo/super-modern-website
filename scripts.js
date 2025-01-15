@@ -155,10 +155,10 @@ const filterWidgets = (filterTerm) => {
     console.log(filteredList);
 }
 
-filterChips[0].addEventListener("click", (event) => {
+/*filterChips[0].addEventListener("click", (event) => {
     console.log(event.target.id);
     filterWidgets(event.target.id);
-})
+})*/
 
 
 createWidgetCards();

@@ -182,11 +182,22 @@
             <section id="widget-details">
                 <h2>Explore our widget library</h2>
                 <div id="filter-container">
-                    <div id="one" class="filter-chip">One</div>
-                    <div id="two" class="filter-chip" onclick="filterWidgets(event.target.id)">Two</div>
-                    <div class="filter-chip">Filter 3</div>
-
-                    <div class="filter-chip">Filter 4</div>
+                    <div class="filter-chip">
+                        <input type="checkbox" id="one" name="widget-filter" value="one" onclick="filterWidgets(event.target.id)">
+                        <label for="one">One</label>
+                    </div>
+                    <div class="filter-chip">
+                        <input type="checkbox" id="two" name="widget-filter" value="two" class="filter-chip" onclick="filterWidgets(event.target.id)">
+                        <label for="two">Two</label>
+                    </div>
+                    <div class="filter-chip">
+                        <input type="checkbox" id="three" name="widget-filter" value="filter-chip" onclick="filterWidgets(event.target.id)">
+                        <label for="checkbox">Three</label>
+                    </div>
+                    <div class="filter-chip">
+                        <input type="checkbox" id="four" name="widget-filter" value="filter-chip" onclick="filterWidgets(event.target.id)">
+                        <label for="four">Four</label>
+                    </div>
 
                 </div>
                 <div id="widget-container">
