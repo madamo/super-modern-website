@@ -148,6 +148,7 @@ const createWidgetCards = () => {
 
 const filterWidgets = (filterTerm) => {
     console.log(filterTerm);
+    widgetContainer.classList.add("filter-in");
     const widgetCards = document.getElementsByClassName("widget-card");
     for (let i = 0; i < widgetCards.length; i++) {
         if (filterTerm === "all") {
@@ -174,7 +175,15 @@ const filterWidgets = (filterTerm) => {
 
 createWidgetCards();
 
-console.log(featureImages);
+widgetContainer.addEventListener("animationend", (event) => {
+    console.log(event.animationName)
+    if (event.animationName !== "filter-in") {
+        return;
+    }
+    widgetContainer.classList.remove("filter-in");
+})
+
+//console.log(featureImages);
 
 /*featureContainer.addEventListener("scroll", (event) => {
     //alert("scrolling!");

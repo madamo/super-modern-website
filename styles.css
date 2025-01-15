@@ -442,9 +442,10 @@ div.feature:last-of-type {
     .filter-chip {
         position: relative;
         text-align: center;
-        width: 15%;
+        width: 10%;
+        height: 50px;
         border: 1px solid black;
-        border-radius: 15px;
+        border-radius: 35px;
         margin: 0 10px;
 
 
@@ -456,18 +457,20 @@ input[type="radio"] {
     appearance: none;
     width: 100%;
     height: 100%;
-    border: 1px solid red;
+    border-radius: 35px;
 }
 
 input[type="radio"]:hover + label {
     background-color: black;
     color: white;
+    border-radius: 35px;
+
 }
 
 input[type="radio"]:checked + label {
     background-color: black;
     color: white;
-    border: 2px solid green;
+    border-radius: 35px;
 }
 
 label {
@@ -476,6 +479,9 @@ label {
     height: 100%;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -494,7 +500,8 @@ label {
     width: 30%;
     box-shadow: 5px 5px 5px 0px rgba(232,232,232,1);
     margin: 10px;
-    /*transition: 1s linear;*/
+    opacity: 1;
+    transition: 1s linear;
 
     i {
         color: grey;
@@ -507,9 +514,13 @@ label {
 
 .filtered {
     /*display: none;*/
-    animation: filtered 1s ease-in forwards;
-    overflow: hidden;
+    animation: filter-out 1s ease-in forwards;
+    animation-delay: 2s;
 
+}
+
+.filter-in {
+    animation: filter-in 5s ease-in-out;
 }
 
 
@@ -537,15 +548,21 @@ label {
     }
 }
 
-@keyframes filtered {
-    99% {
+@keyframes filter-out {
+    to {
         transform: scale(0,0);
+        opacity: 0;
+        position: absolute;
+    }
+}
+
+@keyframes filter-in {
+    50% {
         opacity: 0;
     }
 
     100% {
-        height: 0;
-        width: 0;
+        opacity: 1;
     }
 }
 
