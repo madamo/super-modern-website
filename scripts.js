@@ -15,10 +15,17 @@ const featureImgBg = document.getElementById("feature-img-bg"); // will eventual
 const featureImages = document.getElementsByClassName("feature-img")
 const featureContainerTop = featureContainer.offsetTop;
 const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight;
-// TO-DO: reset offsets when window resizes
+let viewport = window.innerWidth;
 
-// Check breakpoint
-const viewport = window.innerWidth;
+
+// TO-DO: add debounce
+// Refresh breakpoint
+/*window.addEventListener("resize", () => {
+    viewport = window.innerWidth;
+    console.log("resized");
+})*/
+
+//window.addEventListener("resize", refreshViewport);
 
 //console.log(`feature section top: ${featureContainer.offsetTop}`);
 console.log(`feature element height: ${featureOffset}`);
@@ -43,40 +50,42 @@ closeMenu.addEventListener("click", () => {
 
 // TO-DO: Only do this at the largest breakpoint
 //TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
-if (viewport > 1084) {
+
 document.addEventListener("scroll", (event) => {
-    console.log(window.scrollY);
-    if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset) { // compare scrollY to featureContainerTop
-        featureImgBg.style.backgroundColor = "lightpink"
-        featureImages[0].classList.add("show-feature-img")
-        featureImages[1].classList.remove("show-feature-img")
-        console.log("img1")
-    } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)) {
-        featureImgBg.style.backgroundColor = "green"
-        featureImages[1].classList.add("show-feature-img")
-        featureImages[0].classList.remove("show-feature-img")
-        featureImages[2].classList.remove("show-feature-img")
+    if (viewport > 1084) {
+        console.log(`viewport: ${viewport}`);
+        //console.log(window.scrollY);
+        if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset) { // compare scrollY to featureContainerTop
+            featureImgBg.style.backgroundColor = "lightpink"
+            featureImages[0].classList.add("show-feature-img")
+            featureImages[1].classList.remove("show-feature-img")
+            console.log("img1")
+        } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)) {
+            featureImgBg.style.backgroundColor = "green"
+            featureImages[1].classList.add("show-feature-img")
+            featureImages[0].classList.remove("show-feature-img")
+            featureImages[2].classList.remove("show-feature-img")
 
-        console.log("img2")
+            console.log("img2")
 
-    } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)) {
-        featureImgBg.style.backgroundColor = "lightseagreen"
-        featureImages[2].classList.add("show-feature-img")
-        featureImages[1].classList.remove("show-feature-img")
-        featureImages[3].classList.remove("show-feature-img")
-        console.log("img3")
+        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)) {
+            featureImgBg.style.backgroundColor = "lightseagreen"
+            featureImages[2].classList.add("show-feature-img")
+            featureImages[1].classList.remove("show-feature-img")
+            featureImages[3].classList.remove("show-feature-img")
+            console.log("img3")
 
-    } else if (window.scrollY > featureContainerTop + (featureOffset*3)) {
-        featureImgBg.style.backgroundColor = "lightcyan"
-        featureImages[3].classList.add("show-feature-img")
-        featureImages[2].classList.remove("show-feature-img")
+        } else if (window.scrollY > featureContainerTop + (featureOffset*3)) {
+            featureImgBg.style.backgroundColor = "lightcyan"
+            featureImages[3].classList.add("show-feature-img")
+            featureImages[2].classList.remove("show-feature-img")
 
-        console.log("img4")
+            console.log("img4")
 
+        }
     }
-
 })
-}
+
 
 console.log(featureImages);
 
