@@ -149,10 +149,21 @@ const createWidgetCards = () => {
 const filterWidgets = (filterTerm) => {
     console.log(filterTerm);
     const widgetCards = document.getElementsByClassName("widget-card");
+    for (let i = 0; i < widgetCards.length; i++) {
+        if (filterTerm === "all") {
+            widgetCards[i].classList.remove("filtered")
+        } else {
+            widgetCards[i].classList.add("filtered");
+        }
+    }
     console.log(widgetCards);
-    const filteredList = Array.prototype.filter.call(widgetCards, (card) => !card.classList.contains(filterTerm)).map((card) => card.classList.toggle("filtered"));
+    if (filterTerm !== "all") {
+        const filteredList = Array.prototype.filter.call(widgetCards, (card) => card.classList.contains(filterTerm)).map((card) => card.classList.remove("filtered"));
+    } else {
+        return;
+    }
    // const filteredList = widgets.filter((widget) => widget.tag == filterTerm );
-    console.log(filteredList);
+    //console.log(filteredList);
 }
 
 /*filterChips[0].addEventListener("click", (event) => {

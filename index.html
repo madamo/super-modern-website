@@ -183,19 +183,23 @@
                 <h2>Explore our widget library</h2>
                 <div id="filter-container">
                     <div class="filter-chip">
-                        <input type="checkbox" id="one" name="widget-filter" value="one" onclick="filterWidgets(event.target.id)">
+                        <input type="radio" id="all" name="widget-filter" value="all" checked onchange="filterWidgets(event.target.value)">
+                        <label for="all">All</label>
+                    </div>
+                    <div class="filter-chip">
+                        <input type="radio" id="one" name="widget-filter" value="one" onchange="filterWidgets(event.target.value)">
                         <label for="one">One</label>
                     </div>
                     <div class="filter-chip">
-                        <input type="checkbox" id="two" name="widget-filter" value="two" onclick="filterWidgets(event.target.id)">
+                        <input type="radio" id="two" name="widget-filter" value="two" onchange="filterWidgets(event.target.value)">
                         <label for="two">Two</label>
                     </div>
                     <div class="filter-chip">
-                        <input type="checkbox" id="three" name="widget-filter" value="three" onclick="filterWidgets(event.target.id)">
+                        <input type="radio" id="three" name="widget-filter" value="three" onchange="filterWidgets(event.target.value)">
                         <label for="three">Three</label>
                     </div>
                     <div class="filter-chip">
-                        <input type="checkbox" id="four" name="widget-filter" value="four" onclick="filterWidgets(event.target.id)">
+                        <input type="radio" id="four" name="widget-filter" value="four" onchange="filterWidgets(event.target.value)">
                         <label for="four">Four</label>
                     </div>
 
