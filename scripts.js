@@ -17,6 +17,51 @@ const featureContainerTop = featureContainer.offsetTop;
 const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight;
 let viewport = window.innerWidth;
 
+// Widget Elements
+const widgetContainer = document.getElementById("widget-container");
+const filterChips = document.getElementsByClassName("filter-chip");
+
+// Create widget data
+const widgets = [
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says: ONE",
+        tag: "one"
+        
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says: ONE",
+        tag: "one"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says: TWO",
+        tag: "two"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says: TWO",
+        tag: "two"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says",
+        tag: "three"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-face-smile",
+        desc: "Here's what the card says",
+        tag: "four"
+    },
+];
+
 
 // TO-DO: add debounce
 // Refresh breakpoint
@@ -50,7 +95,7 @@ closeMenu.addEventListener("click", () => {
 
 // TO-DO: Only do this at the largest breakpoint
 //TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
-
+/*
 document.addEventListener("scroll", (event) => {
     if (viewport > 1084) {
         console.log(`viewport: ${viewport}`);
@@ -84,8 +129,39 @@ document.addEventListener("scroll", (event) => {
 
         }
     }
+})*/
+
+// Widget cards
+
+const createWidgetCards = () => {
+    widgets.forEach((card) => {
+        widgetContainer.innerHTML += `
+        <div class="widget-card ${card.tag}">
+            <img src="${card.img}" />
+            <i class="${card.icon}"></i>
+            <p>${card.desc}</p>
+            <p>Learn more</p>
+        </div>
+        `
+    })
+}
+
+const filterWidgets = (filterTerm) => {
+    console.log(filterTerm);
+    const widgetCards = document.getElementsByClassName("widget-card");
+    console.log(widgetCards);
+    const filteredList = Array.prototype.filter.call(widgetCards, (card) => !card.classList.contains(filterTerm)).map((card) => card.classList.toggle("filtered"));
+   // const filteredList = widgets.filter((widget) => widget.tag == filterTerm );
+    console.log(filteredList);
+}
+
+filterChips[0].addEventListener("click", (event) => {
+    console.log(event.target.id);
+    filterWidgets(event.target.id);
 })
 
+
+createWidgetCards();
 
 console.log(featureImages);
 

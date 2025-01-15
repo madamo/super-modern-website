@@ -419,12 +419,72 @@ div.feature:last-of-type {
 }
 
 
-/* Feature Details */
+/* Widget Details */
 
-#feature-details {
+#widget-details {
     border: 1px solid red;
-    height: 500px;
     margin-top: 50px;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#filter-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.filter-chip {
+    text-align: center;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 0 10px;
+}
+
+.filter-chip:hover {
+    background-color: black;
+    color: white;
+}
+
+#widget-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.widget-card {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 5px 5px 5px 0px rgba(232,232,232,1);
+    margin: 10px;
+    transition: 1s linear;
+
+    i {
+        color: grey;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.filtered {
+    display: none;
 }
 
 
