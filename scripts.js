@@ -51,13 +51,13 @@ const widgets = [
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
         icon: "fa-solid fa-face-smile",
-        desc: "Here's what the card says",
+        desc: "Here's what the card says: THREE",
         tag: "three"
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
         icon: "fa-solid fa-face-smile",
-        desc: "Here's what the card says",
+        desc: "Here's what the card says: FOUR",
         tag: "four"
     },
 ];
