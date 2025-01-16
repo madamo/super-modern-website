@@ -583,6 +583,7 @@ label {
 
 .testimonial-cta {
     width: 30%;
+    min-width: 200px;
     height: 60px;
     font-size: 1.25rem;
     border-radius: 20px;
@@ -770,6 +771,7 @@ label {
 - show search, primary CTA, hamburger menu */
 
 @media (max-width: 1084px) {
+
     #logo {
         margin-right: 20%;
     }
@@ -904,8 +906,24 @@ label {
     #filter-container::-webkit-scrollbar {
         display: none;
     }
-    
-    
+
+    #testimonials {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "a b"
+        "d d"
+        "e e"
+        "f f"
+        "g g";
+    }
+
+    .main-quote {
+        font-size: 1.3rem;
+    }
+
+    .testimonial-img2, .testimonial-img3 {
+        display: none;
+    }
 
 }
 
