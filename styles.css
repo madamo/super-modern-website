@@ -550,7 +550,6 @@ label {
 /* Testimonials */
 
 #testimonials {
-    border: 1px solid red;
     margin-top: 80px;
     padding: 20px;
     background-color: lightblue;
@@ -568,7 +567,7 @@ label {
 
 #testimonial-header-container {
     grid-area: a;
-    outline: 1px solid magenta; 
+    /*outline: 1px solid magenta; */
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -623,7 +622,6 @@ label {
 
 .testimonial-img1 {
     grid-area: b;
-    outline: 1px solid magenta;
     
     img {
         width: 100%;
@@ -633,7 +631,6 @@ label {
 
 .testimonial-img2 {
     grid-area: c;
-    outline: 1px solid magenta;
 
     img {
         width: 100%;
@@ -642,7 +639,6 @@ label {
 
 .testimonial-quote1 {
     grid-area: d;
-    outline: 1px solid magenta;
 
     .long-quote {
         font-size: 1.8rem;
@@ -660,7 +656,6 @@ label {
 }
 .testimonial-quote2 {
     grid-area: e;
-    outline: 1px solid magenta;
 
 }
 
@@ -677,13 +672,11 @@ label {
 
 .testimonial-quote3 {
     grid-area: f;
-    outline: 1px solid magenta;
 
 }
 
 .testimonial-quote4 {
     grid-area: g;
-    outline: 1px solid magenta;
 
 }
 
@@ -693,7 +686,6 @@ label {
 
 .testimonial-img3 {
     grid-area: h;
-    outline: 1px solid magenta;
 
     img {
         width: 100%;
