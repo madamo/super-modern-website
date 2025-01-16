@@ -546,6 +546,86 @@ label {
     animation: filter-in .5s ease-in-out;
 }
 
+
+/* Testimonials */
+
+#testimonials {
+    border: 1px solid red;
+    margin-top: 80px;
+    background-color: lightblue;
+    display: grid;
+    gap: 10px;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+    grid-template-areas: 
+        "a a a b b"
+        "c d d d e"
+        "c d d d f"
+        "g g g h h";
+
+}
+
+
+#testimonial-header-container {
+    grid-area: a;
+    outline: 1px solid magenta; 
+    padding: 20px;
+
+}
+
+.main-quote {
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+.quote-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.testimonial-img1 {
+    grid-area: b;
+    outline: 1px solid magenta;
+
+}
+
+.testimonial-img2 {
+    grid-area: c;
+    outline: 1px solid magenta;
+
+    img {
+        width: 100%;
+    }
+}
+
+.testimonial-quote1 {
+    grid-area: d;
+    outline: 1px solid magenta;
+}
+.testimonial-quote2 {
+    grid-area: e;
+    outline: 1px solid magenta;
+
+}
+
+.testimonial-quote3 {
+    grid-area: f;
+    outline: 1px solid magenta;
+
+}
+
+.testimonial-quote4 {
+    grid-area: g;
+    outline: 1px solid magenta;
+
+}
+
+.testimonial-img3 {
+    grid-area: h;
+    outline: 1px solid magenta;
+
+}
+
 /* Animations */
 
 
