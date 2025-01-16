@@ -694,6 +694,22 @@ label {
 
 }
 
+/* Case Studies */
+
+#case-studies {
+    border: 1px solid red;
+    background-image: linear-gradient(to bottom, lightblue, white);
+}
+
+.case-study {
+    
+}
+
+.case-study iframe {
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+
 /* Animations */
 
 
