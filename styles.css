@@ -446,6 +446,7 @@ div.feature:last-of-type {
         position: relative;
         text-align: center;
         width: 10%;
+        min-width: 100px;
         height: 50px;
         border: 1px solid black;
         border-radius: 35px;
@@ -501,6 +502,7 @@ label {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 30%;
+    min-width: 250px;
     height: 400px;
     box-shadow: 5px 5px 5px 0px rgba(232,232,232,1);
     margin: 10px;
@@ -544,6 +546,8 @@ label {
 .filter-in {
     animation: filter-in .5s ease-in-out;
 }
+
+/* Animations */
 
 
 @keyframes scroll-logos {
@@ -601,6 +605,10 @@ label {
     #search-container {
         margin-left: calc(15% - 12px);
         width: 87%;
+    }
+
+    .widget-card {
+        height: 380px;
     }
 }
 
@@ -727,6 +735,22 @@ label {
     
     .mobile-img-bg.fourth {
         background-color: lightcyan;
+    }
+
+    #filter-container {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        border: 1px solid purple;
+        overflow: scroll;
+    }
+
+    .widget-card {
+        width: 80%;
+        max-width: 350px;
+    }
+
+    #filter-container::-webkit-scrollbar {
+        display: none;
     }
     
     
