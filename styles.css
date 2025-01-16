@@ -694,6 +694,68 @@ label {
 
 }
 
+/* Footer */
+
+#footer {
+    border: 1px solid red;
+
+    margin-top: 80px;
+    padding: 20px 20px 0 20px;
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        gap: 30px;
+
+        ul {
+        }
+
+        li {
+            display: block;
+        }
+
+    }
+
+
+}
+
+.footer-links ul li {
+    display: block;
+}
+
+#footer-connect-links {
+    display: flex;
+    margin: 40px 0 20px 0;
+    flex-direction: row;
+    justify-content: space-between;
+
+    #socials i {
+        margin: 0 5px;
+        font-size: 1.3rem;
+    }
+
+    li {
+        list-style: none;
+        display: inline;
+        margin: 0 15px;
+    }
+
+    li:last-of-type {
+        margin-right: 0;
+    }
+}
+
+#footer-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 0 0 0;
+}
+
+
+
+
 /* Animations */
 
 
