@@ -272,8 +272,7 @@ nav {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: flex-start;
-        /*animation: scroll-logos infinite 35s linear;*/
+        /*animation: scroll-logos infinite 35s linear; */ /* Comment in to scroll logos */
 
         img {
             height: 50px;
@@ -300,7 +299,7 @@ nav {
 
 #features {
     /*border: 1px solid red;*/
-    margin-top: 50px;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     height: 2120px;
