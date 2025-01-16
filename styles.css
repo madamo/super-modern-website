@@ -422,7 +422,6 @@ div.feature:last-of-type {
 /* Widget Details */
 
 #widget-details {
-    border: 1px solid red;
     margin-top: 80px;
 
     h2 {
@@ -740,7 +739,6 @@ label {
     #filter-container {
         flex-wrap: nowrap;
         justify-content: flex-start;
-        border: 1px solid purple;
         overflow: scroll;
     }
 
