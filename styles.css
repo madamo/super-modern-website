@@ -552,15 +552,16 @@ label {
 #testimonials {
     border: 1px solid red;
     margin-top: 80px;
+    padding: 20px;
     background-color: lightblue;
     display: grid;
-    gap: 10px;
-    /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
     grid-template-areas: 
-        "a a a b b"
-        "c d d d e"
-        "c d d d f"
-        "g g g h h";
+        "a a a a a a a b b b b b"
+        "c c c d d d d d d e e e"
+        "c c c d d d d d d f f f"
+        "g g g g g g g g g g h h";
 
 }
 
@@ -569,6 +570,9 @@ label {
     grid-area: a;
     outline: 1px solid magenta; 
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -577,15 +581,52 @@ label {
     font-weight: 500;
 }
 
+.testimonial-cta {
+    width: 30%;
+    height: 60px;
+    font-size: 1.25rem;
+    border-radius: 20px;
+    border: 2px solid yellow;
+}
+
 .quote-card {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
 }
 
+.quote-card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0 5px 0;
+
+
+    img {
+        height: 30px;
+    }
+
+    .more-arrow {
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        font-size: 1.3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: wheat;
+    }
+}
+
 .testimonial-img1 {
     grid-area: b;
     outline: 1px solid magenta;
+    
+    img {
+        width: 100%;
+    }
 
 }
 
@@ -601,11 +642,36 @@ label {
 .testimonial-quote1 {
     grid-area: d;
     outline: 1px solid magenta;
+
+    .long-quote {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+
+    .attr-name {
+        margin: 35px 0 10px 0;
+        font-weight: bold;
+    }
+
+    .attr-title {
+        margin: 5px 0;
+    }
 }
 .testimonial-quote2 {
     grid-area: e;
     outline: 1px solid magenta;
 
+}
+
+.stat-quote {
+    font-size: 1.1rem;
+
+    .stat {
+        font-size: 1.8rem;
+        display: block;
+        width: 100%;
+
+    }
 }
 
 .testimonial-quote3 {
@@ -620,9 +686,17 @@ label {
 
 }
 
+.horiz-quote {
+    font-size: 1.4rem;
+}
+
 .testimonial-img3 {
     grid-area: h;
     outline: 1px solid magenta;
+
+    img {
+        width: 100%;
+    }
 
 }
 
