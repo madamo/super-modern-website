@@ -423,7 +423,7 @@ div.feature:last-of-type {
 
 #widget-details {
     border: 1px solid red;
-    margin-top: 50px;
+    margin-top: 80px;
 
     h2 {
         width: 100%;
@@ -438,6 +438,9 @@ div.feature:last-of-type {
     justify-content: center;
     margin: 20px 0;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    background-color: white;
 
     .filter-chip {
         position: relative;
@@ -498,29 +501,48 @@ label {
     border: 1px solid lightgrey;
     border-radius: 10px;
     width: 30%;
+    height: 400px;
     box-shadow: 5px 5px 5px 0px rgba(232,232,232,1);
     margin: 10px;
-    opacity: 1;
-    transition: 1s linear;
+
 
     i {
         color: grey;
+        margin: 15px 0;
+        font-size: 1.5rem;
+        padding-left: 10px;
     }
 
     img {
         width: 100%;
     }
+
+    .widget-card-desc {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        padding-left: 10px;
+    }
+
+    .learn-more {
+        padding-left: 10px;
+        margin: 15px 0;
+        color: black;
+        text-decoration: none;
+    }
+
+    .learn-more:hover {
+        text-decoration: underline;
+    }
 }
 
 .filtered {
     /*display: none;*/
-    animation: filter-out 1s ease-in forwards;
-    animation-delay: 2s;
+    animation: filter-out .1s ease-in forwards;
 
 }
 
 .filter-in {
-    animation: filter-in 5s ease-in-out;
+    animation: filter-in .5s ease-in-out;
 }
 
 

@@ -27,38 +27,50 @@ const widgets = [
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
         icon: "fa-solid fa-face-smile",
         desc: "Here's what the card says: ONE",
-        tag: "one"
+        tag: "smiles"
         
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
         icon: "fa-solid fa-face-smile",
         desc: "Here's what the card says: ONE",
-        tag: "one"
+        tag: "smiles"
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
-        icon: "fa-solid fa-face-smile",
+        icon: "fa-solid fa-mug-hot",
         desc: "Here's what the card says: TWO",
-        tag: "two"
+        tag: "coffee"
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
-        icon: "fa-solid fa-face-smile",
+        icon: "fa-solid fa-mug-hot",
         desc: "Here's what the card says: TWO",
-        tag: "two"
+        tag: "coffee"
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
-        icon: "fa-solid fa-face-smile",
+        icon: "fa-solid fa-lemon",
         desc: "Here's what the card says: THREE",
-        tag: "three"
+        tag: "lemons"
     },
     {
         img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
-        icon: "fa-solid fa-face-smile",
+        icon: "fa-solid fa-lemon",
+        desc: "Here's what the card says: THREE",
+        tag: "lemons"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-lemon",
+        desc: "Here's what the card says: THREE",
+        tag: "lemons"
+    },
+    {
+        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        icon: "fa-solid fa-snowflake",
         desc: "Here's what the card says: FOUR",
-        tag: "four"
+        tag: "snow"
     },
 ];
 
@@ -94,8 +106,8 @@ closeMenu.addEventListener("click", () => {
 })
 
 // TO-DO: Only do this at the largest breakpoint
-//TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
-/*
+// TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
+/* COMMENT BACK IN FOR LAUNCH!!!!!
 document.addEventListener("scroll", (event) => {
     if (viewport > 1084) {
         console.log(`viewport: ${viewport}`);
@@ -139,8 +151,8 @@ const createWidgetCards = () => {
         <div class="widget-card ${card.tag}">
             <img src="${card.img}" />
             <i class="${card.icon}"></i>
-            <p>${card.desc}</p>
-            <p>Learn more</p>
+            <p class="widget-card-desc">${card.desc}</p>
+            <a href="#" class="learn-more">Learn more →</a>
         </div>
         `
     })
@@ -149,28 +161,25 @@ const createWidgetCards = () => {
 const filterWidgets = (filterTerm) => {
     console.log(filterTerm);
     widgetContainer.classList.add("filter-in");
-    const widgetCards = document.getElementsByClassName("widget-card");
-    for (let i = 0; i < widgetCards.length; i++) {
-        if (filterTerm === "all") {
-            widgetCards[i].classList.remove("filtered")
-        } else {
-            widgetCards[i].classList.add("filtered");
+    setTimeout(() => {
+        const widgetCards = document.getElementsByClassName("widget-card");
+        for (let i = 0; i < widgetCards.length; i++) {
+            if (filterTerm === "all") {
+                widgetCards[i].classList.remove("filtered")
+            } else {
+                widgetCards[i].classList.add("filtered");
+            }
         }
-    }
-    console.log(widgetCards);
-    if (filterTerm !== "all") {
-        const filteredList = Array.prototype.filter.call(widgetCards, (card) => card.classList.contains(filterTerm)).map((card) => card.classList.remove("filtered"));
-    } else {
-        return;
-    }
-   // const filteredList = widgets.filter((widget) => widget.tag == filterTerm );
-    //console.log(filteredList);
+        console.log(widgetCards);
+        if (filterTerm !== "all") {
+            const filteredList = Array.prototype.filter.call(widgetCards, (card) => card.classList.contains(filterTerm)).map((card) => card.classList.remove("filtered"));
+        } else {
+            return;
+        }
+
+    }, 200);
 }
 
-/*filterChips[0].addEventListener("click", (event) => {
-    console.log(event.target.id);
-    filterWidgets(event.target.id);
-})*/
 
 
 createWidgetCards();
