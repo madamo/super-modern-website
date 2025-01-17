@@ -18,6 +18,7 @@ const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight
 let viewport = window.innerWidth;
 
 // Widget Elements
+const widgetDetails = document.getElementById("widget-details");
 const widgetContainer = document.getElementById("widget-container");
 const filterChips = document.getElementsByClassName("filter-chip");
 
@@ -170,6 +171,8 @@ const filterWidgets = (filterTerm) => {
                 widgetCards[i].classList.add("filtered");
             }
         }
+        //window.scrollTo({top: widgetDetails.offsetTop, behavior: "smooth"});
+        //widgetContainer.scrollTo(-200,0);
         console.log(widgetCards);
         if (filterTerm !== "all") {
             const filteredList = Array.prototype.filter.call(widgetCards, (card) => card.classList.contains(filterTerm)).map((card) => card.classList.remove("filtered"));
@@ -186,6 +189,8 @@ createWidgetCards();
 
 widgetContainer.addEventListener("animationend", (event) => {
     console.log(event.animationName)
+    widgetContainer.scrollTo({top: 0, behavior: "smooth"});
+
     if (event.animationName !== "filter-in") {
         return;
     }
