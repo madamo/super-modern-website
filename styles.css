@@ -837,6 +837,26 @@ label {
     .widget-card {
         height: 380px;
     }
+
+    #features {
+        height: 1200px;
+    }
+
+    .feature {
+        height: 500px;
+        margin-bottom: 100px;
+    }
+
+    .feature-img-container {
+        height: 100%;
+        border: 1px solid orangered;
+
+        .feature-img {
+            height: 100%;
+            width: 100%;
+            border: 1px solid blue;
+        }
+    }
 }
 
 /* Breakpoint 2 < 1085px width
@@ -902,7 +922,7 @@ label {
     }
 
     .feature {
-        margin-bottom: 40px;
+        margin-bottom: 100px;
     }
 
     .feature-text {
