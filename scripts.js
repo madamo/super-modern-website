@@ -128,7 +128,7 @@ document.addEventListener("scroll", (event) => {
 
             console.log("img2")
 
-        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3 ) {
+        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3) {
             featureImgBg.style.backgroundColor = "lightseagreen"
             featureImages[2].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")

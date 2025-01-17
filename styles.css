@@ -2,7 +2,7 @@
     --cta-primary: lightgrey;
     --cta-hover: aqua;
     --icon-primary: grey;
-    --feature-area-height: 2400px;
+    --feature-area-height: 3500px;
 }
 
 
@@ -316,15 +316,16 @@ nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     position: relative;
-    height: 500px;
+    height: 800px;
     margin-bottom: 100px;
 
 }
 
 .feature-text {
-     /*border: 1px solid gold;*/
+    border: 1px solid gold;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -371,16 +372,17 @@ div.feature:last-of-type {
     position: relative;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 
 }
 
 .feature-img {
     border: 1px solid black;
     position: sticky;
-    top: calc(50% - 220px);
-    /*top: 50px;*/
+    /*top: calc(50% - 220px);*/
+    top: 0;
     width: 80%;
+    height: 500px;
     margin-left: 10%;
     display: none;
 
@@ -395,7 +397,10 @@ div.feature:last-of-type {
 }
 
 .show-feature-img {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     animation: enter-img .4s ease-out;
 }
 
@@ -406,6 +411,7 @@ div.feature:last-of-type {
     position: absolute;
     top: 0;
     right: 0;
+    /*padding-top: 50px;*/
 }
 
 #feature-img-bg {
