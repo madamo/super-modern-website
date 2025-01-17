@@ -15,6 +15,8 @@ const featureImgBg = document.getElementById("feature-img-bg"); // will eventual
 const featureImages = document.getElementsByClassName("feature-img")
 const featureContainerTop = featureContainer.offsetTop;
 const featureOffset = document.getElementsByClassName("feature")[0].offsetHeight;
+const featureMargin = 100; //TO-DO: get the margin dynamically in case it changes later
+
 let viewport = window.innerWidth;
 
 // Widget Elements
@@ -108,17 +110,17 @@ closeMenu.addEventListener("click", () => {
 
 // TO-DO: Only do this at the largest breakpoint
 // TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
-/* COMMENT BACK IN FOR LAUNCH!!!!!
+//COMMENT BACK IN FOR LAUNCH!!!!!
 document.addEventListener("scroll", (event) => {
     if (viewport > 1084) {
         console.log(`viewport: ${viewport}`);
         //console.log(window.scrollY);
-        if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset) { // compare scrollY to featureContainerTop
+        if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin) { // compare scrollY to featureContainerTop
             featureImgBg.style.backgroundColor = "lightpink"
             featureImages[0].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             console.log("img1")
-        } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)) {
+        } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)+featureMargin*2) {
             featureImgBg.style.backgroundColor = "green"
             featureImages[1].classList.add("show-feature-img")
             featureImages[0].classList.remove("show-feature-img")
@@ -126,7 +128,7 @@ document.addEventListener("scroll", (event) => {
 
             console.log("img2")
 
-        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)) {
+        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3 ) {
             featureImgBg.style.backgroundColor = "lightseagreen"
             featureImages[2].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
@@ -142,7 +144,7 @@ document.addEventListener("scroll", (event) => {
 
         }
     }
-})*/
+})
 
 // Widget cards
 
@@ -196,6 +198,7 @@ widgetContainer.addEventListener("animationend", (event) => {
     }
     widgetContainer.classList.remove("filter-in");
 })
+
 
 //console.log(featureImages);
 

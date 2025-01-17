@@ -2,6 +2,7 @@
     --cta-primary: lightgrey;
     --cta-hover: aqua;
     --icon-primary: grey;
+    --feature-area-height: 2400px;
 }
 
 
@@ -298,11 +299,11 @@ nav {
 /* Feature Section */
 
 #features {
-    /*border: 1px solid red;*/
+    border: 1px solid red;
     margin-top: 80px;
     display: flex;
     flex-direction: column;
-    height: 2120px;
+    height: var(--feature-area-height);
     position: relative;
 }
 
@@ -311,12 +312,15 @@ nav {
 }
 
 .feature {
-    /*border: 1px solid gold;*/
+    border: 1px solid gold;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     position: relative;
+    height: 500px;
+    margin-bottom: 100px;
+
 }
 
 .feature-text {
@@ -324,7 +328,6 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 40px;
     padding: 0 20px;
     height: 500px;
     width: 50%;
@@ -362,18 +365,21 @@ div.feature:last-of-type {
     overflow: hidden; */
 
 .feature-img-container {
-    /*border: 1px solid green;*/
+    border: 1px solid green;
     width: 50%;
     height: 100%;
     position: relative;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+
 }
 
 .feature-img {
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     position: sticky;
-    top: calc(50% - 200px);
+    top: calc(50% - 220px);
+    /*top: 50px;*/
     width: 80%;
     margin-left: 10%;
     display: none;
@@ -383,6 +389,7 @@ div.feature:last-of-type {
         width: 100%;
         margin: 0 auto;
         object-fit: contain;
+        border: 1px solid red;
 
     }
 }
@@ -395,7 +402,7 @@ div.feature:last-of-type {
 #feature-bg-column {
     /*border: 1px solid blue;*/
     width: 50%;
-    height: 2120px;
+    height: var(--feature-area-height);
     position: absolute;
     top: 0;
     right: 0;
@@ -404,7 +411,7 @@ div.feature:last-of-type {
 #feature-img-bg {
     background-color: lightpink;
     width: 100%;
-    height: 25%;
+    height: calc((2120px - 120px) / 4);
     right: 0;
     top: 0;
     border-radius: 100px;
