@@ -78,11 +78,13 @@ const widgets = [
 ];
 
 
-// TO-DO: add debounce
+// TO-DO: check debounce
 // Refresh breakpoint
 /*window.addEventListener("resize", () => {
-    viewport = window.innerWidth;
-    console.log("resized");
+    setTimeout(() => { 
+        viewport = window.innerWidth;
+        console.log("resized");
+    }, 1000);
 })*/
 
 //window.addEventListener("resize", refreshViewport);
@@ -108,19 +110,18 @@ closeMenu.addEventListener("click", () => {
     // TO-DO: Make sure this is hidden from screen readers
 })
 
-// TO-DO: Only do this at the largest breakpoint
-// TO-DO: figure out where the Feature headline is, change stuff when it's in the center of the image
+// TO-DO: Exit images
 //COMMENT BACK IN FOR LAUNCH!!!!!
 document.addEventListener("scroll", (event) => {
     if (viewport > 1084) {
         console.log(`viewport: ${viewport}`);
-        //console.log(window.scrollY);
-        if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin) { // compare scrollY to featureContainerTop
+        console.log(window.scrollY);
+        if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin - 100) { // compare scrollY to featureContainerTop
             featureImgBg.style.backgroundColor = "lightpink"
             featureImages[0].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             console.log("img1")
-        } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)+featureMargin*2) {
+        } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)+featureMargin*2 - 100) {
             featureImgBg.style.backgroundColor = "green"
             featureImages[1].classList.add("show-feature-img")
             featureImages[0].classList.remove("show-feature-img")
@@ -128,20 +129,34 @@ document.addEventListener("scroll", (event) => {
 
             console.log("img2")
 
-        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3) {
+        } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3 - 100) {
             featureImgBg.style.backgroundColor = "lightseagreen"
             featureImages[2].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             featureImages[3].classList.remove("show-feature-img")
+
             console.log("img3")
 
-        } else if (window.scrollY > featureContainerTop + (featureOffset*3)) {
+        } else if (window.scrollY > featureContainerTop + (featureOffset*3 - 100)) {
             featureImgBg.style.backgroundColor = "lightcyan"
             featureImages[3].classList.add("show-feature-img")
             featureImages[2].classList.remove("show-feature-img")
 
             console.log("img4")
 
+        }
+
+        if (window.scrollY === 1260) {
+            featureImages[0].classList.add("exit-img");
+            //featureImages[0].style.opacity = "0";
+        }
+
+        if (window.scrollY > 2160) {
+            featureImages[1].classList.add("exit-img");
+        }
+
+        if (window.scrollY > 3050) {
+            featureImages[2].classList.add("exit-img");
         }
     }
 })
@@ -198,6 +213,15 @@ widgetContainer.addEventListener("animationend", (event) => {
     }
     widgetContainer.classList.remove("filter-in");
 })
+
+/*featureImages[0].addEventListener("animationend", (event) => {
+    console.log(event.animationName)
+
+    if (event.animationName !== "exit-img") {
+        return;
+    }
+    featureImages[0].classList.remove("exit-img");
+})*/
 
 
 //console.log(featureImages);
