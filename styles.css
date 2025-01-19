@@ -443,7 +443,6 @@ nav {
 
 #feature-text-column {
     width: 50%;
-    z-index: 2;
 }
 
 .feature {
@@ -468,8 +467,6 @@ nav {
     height: 500px;
     width: 50%;
     min-width: 520px;
-    z-index: 1;
-
 
 
     .feature-text-container {
@@ -551,7 +548,7 @@ div.feature:last-of-type {
 
 #feature-bg-column {
     /*border: 1px solid blue;*/
-    width: 100%;
+    width: 50%;
     height: var(--feature-area-height);
     position: absolute;
     top: 0;
@@ -560,15 +557,12 @@ div.feature:last-of-type {
 }
 
 #feature-img-bg {
-    /*background-color: lightpink;*/
-    background-image: url("forest.jpg");
-    background-position: center;
+    background-color: lightpink;
     width: 100%;
-    /*height: calc((2120px - 120px) / 4);*/
-    height: 100%;
+    height: calc((2120px - 120px) / 4);
     right: 0;
     top: 0;
-    /*border-radius: 100px;*/
+    border-radius: 100px;
     position: sticky;
     display: block;
     transition: .5s linear;
