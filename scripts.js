@@ -118,7 +118,7 @@ document.addEventListener("scroll", (event) => {
         console.log(window.scrollY);
         if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin - 100) { // compare scrollY to featureContainerTop
             //featureImgBg.style.backgroundPositionY = "40%"
-            //featureImgBg.style.backgroundColor = "green"
+            //featureImgBg.style.backgroundColor = "lightpink"
 
             featureImages[0].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")

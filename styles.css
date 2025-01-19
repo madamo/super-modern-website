@@ -3,7 +3,7 @@
     --cta-hover: var(--ring-gold-light);
     --font-color-primary: var(--mtn-grey);
     --icon-primary: grey;
-    --feature-area-height: 3500px;
+    --feature-area-height: 3200px;
 
     --body-text: Lora, sans-serif;
     --header-text: Cinzel, sans-serif;
@@ -70,7 +70,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 
-    background-image: linear-gradient(to bottom, var(--elven-silver), var(--mirkwood-green));
+   /* background-image: linear-gradient(to bottom, var(--elven-silver), var(--mirkwood-green));*/
 
 
 
@@ -333,6 +333,10 @@ nav {
 
 }
 
+main {
+    position: relative;
+}
+
 
 
 /* Hero Content */
@@ -453,14 +457,17 @@ nav {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    position: relative;
     height: 800px;
-    margin-bottom: 100px;
+    position: relative;
+    /*margin-bottom: 100px;*/
+    /*position: sticky;
+    top: 0; */
 
 }
 
 .feature-text {
     /*border: 1px solid gold;*/
+    color: var(--mtn-grey);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,6 +476,9 @@ nav {
     width: 50%;
     min-width: 520px;
     z-index: 1;
+   /* position: sticky;
+    top: 0; */
+
 
 
 
@@ -531,6 +541,8 @@ div.feature:last-of-type {
         width: 100%;
         margin: 0 auto;
         object-fit: contain;
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+
        /* border: 1px solid red;*/
 
     }
@@ -551,7 +563,7 @@ div.feature:last-of-type {
 
 #feature-bg-column {
     /*border: 1px solid blue;*/
-    width: 100%;
+    width: 50%;
     height: var(--feature-area-height);
     position: absolute;
     top: 0;
@@ -561,11 +573,15 @@ div.feature:last-of-type {
 
 #feature-img-bg {
     /*background-color: lightpink;*/
-    background-image: url("forest.jpg");
-    background-position: center;
+    border: 15px double var(--shire-gold);
+    border-image: linear-gradient(45deg, var(--shire-gold), 
+    white, 
+    var(--shire-gold) 50% ) 10;
+    background-color: var(--mirkwood-green);
+    /*background-image: url("forest.jpg");
+    background-position: top;*/
     width: 100%;
-    /*height: calc((2120px - 120px) / 4);*/
-    height: 100%;
+    height: calc((2120px - 120px) / 4);
     right: 0;
     top: 0;
     /*border-radius: 100px;*/
@@ -717,7 +733,7 @@ label {
 #testimonials {
     margin-top: 80px;
     padding: 20px;
-    background-color: lightblue;
+    background-image: radial-gradient(var(--mirkwood-green), var(--elven-silver));
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(12, 1fr);
@@ -781,7 +797,7 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: wheat;
+        background-color: var(--shire-gold);
     }
 }
 
