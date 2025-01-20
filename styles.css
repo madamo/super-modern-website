@@ -1,25 +1,47 @@
 :root {
-    --cta-primary: var(--ring-gold);
+    --cta-primary: var(--cool-cyan);
     --cta-hover: var(--ring-gold-light);
     --font-color-primary: var(--mtn-grey);
     --icon-primary: grey;
     --feature-area-height: 3500px;
 
-    --body-text: Helvetica, sans-serif;
-    --header-text: Helvetica, sans-serif;
+    --body-text: Roboto, sans-serif;
+    --header-text: Poppins, sans-serif;
 
     --side-padding: 20px;
+
+    --bold-magenta: #FF006E;
+    --tech-gray: #333333;
+    --cool-cyan: #00BFFF;
+    --elec-purple: #9400D3;
+    --soft-pink: #FFC1E3;
+    --light-gray: #F5F5F5;
+    --white-smoke: #EDEDED;
+
+
 
     /*Body Text: Use Lora in "Mountain Grey" for readability on light backgrounds or "Elven Silver" on dark backgrounds.
 Backgrounds: Employ gradients or textures combining "Mirkwood Green" and "Mountain Grey" for a grounded fantasy feel.
 Buttons and Highlights: Use "Shire Gold" or "Ring Gold" to draw attention to calls-to-action. */
     /* Colors */
-    --mirkwood-green: #2C5F2D;
-    --shire-gold: #F4A261;
-    --elven-silver: #E5E5E5;
-    --mtn-grey: #6D6875;
-    --ring-gold: #FFD700;
-    --ring-gold-light: #ffe865;
+ /* Color Palette
+
+ Primary Color:
+
+Bold Magenta (#FF006E): The core brand color, vibrant and energetic, representing creativity and innovation.
+Secondary Colors:
+
+Tech Gray (#333333): A sleek, modern dark gray for text and contrasting elements.
+Cool Cyan (#00BFFF): A bright cyan for accents and interactive elements like buttons or highlights.
+Accent Colors:
+
+Electric Purple (#9400D3): A complementary purple to add depth and variety.
+Soft Pink (#FFC1E3): A lighter magenta-inspired shade for subtle backgrounds or highlights.
+Neutral Colors:
+
+Light Gray (#F5F5F5): A clean, neutral background color.
+White Smoke (#EDEDED): For cards, sections, or dividers.
+*/
 
 }
 
@@ -348,8 +370,7 @@ nav {
 
     h1 {
         font-size: 4rem;
-        font-family: var(--body-text);
-        text-transform: uppercase;
+        font-family: var(--header-text);
         color: black;
     }
 
@@ -474,6 +495,7 @@ nav {
         h3 {
             font-size: 2.2rem;
             margin-bottom: 20px;
+            font-family: var(--header-text);
         }
 
         p {
