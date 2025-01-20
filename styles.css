@@ -72,6 +72,10 @@ body {
 
 }
 
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
 header {
     display: flex;
     position: relative;
@@ -700,6 +704,23 @@ label {
 
 .filter-in {
     animation: filter-in .5s ease-in-out;
+}
+
+#widget-dialog::backdrop {
+    background-color: lightgrey;
+    opacity: .75;
+}
+
+:modal {
+    border: 10px solid red;
+    background-color: wheat;
+    /*position: fixed;*/
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    z-index: 3;
+    top: 0;
+    overscroll-behavior: contain;
 }
 
 

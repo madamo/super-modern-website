@@ -183,6 +183,7 @@
             </section>
 
             <section id="widget-details">
+
                 <div id="filter-container">
                     <h2>Explore our widget library</h2>
 
@@ -209,7 +210,12 @@
 
                 </div>
                 <div id="widget-container">
-                    <div class="widget-card smiles">
+                    <!--<dialog id="widget-dialog">
+                        <p>Here's a popup</p>
+                        <button id="close-dialog">Close</button>
+                    </dialog>-->
+
+                    <div class="widget-card smiles" onclick="document.getElementById('widget-dialog').showModal()">
                         <img src="https://fakeimg.pl/600x400?text=Image+4&font=noto" />
                         <i class ="fa-solid fa-face-smile"></i>
                         <p class="widget-card-desc">Here's what the card says</p>
