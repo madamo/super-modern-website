@@ -390,7 +390,7 @@ main {
     display: flex; 
     flex-direction: column;
 
-    margin-top: 100px;
+    margin-top: 150px;
     position: relative; /* this is if we want some sort of border */
     background-color: white;
     padding: 10px 0 36px 0; /* bottom padding = top padding plus height of H2 */
@@ -438,7 +438,7 @@ main {
 
 #features {
     /*border: 1px solid red;*/
-    margin-top: 80px;
+    margin-top: 150px;
     display: flex;
     flex-direction: column;
     height: var(--feature-area-height);
@@ -467,7 +467,7 @@ main {
 
 .feature-text {
     /*border: 1px solid gold;*/
-    color: var(--mtn-grey);
+    /*color: var(--mtn-grey);*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -568,23 +568,24 @@ div.feature:last-of-type {
     position: absolute;
     top: 0;
     right: 0;
+    padding-left: 100px;
     /*padding-top: 50px;*/
 }
 
 #feature-img-bg {
-    /*background-color: lightpink;*/
-    border: 15px double var(--shire-gold);
-    border-image: linear-gradient(45deg, var(--shire-gold), 
+    background-color: var(--mirkwood-green);
+    /*border: 15px double var(--shire-gold);*/
+    /*border-image: linear-gradient(45deg, var(--shire-gold), 
     white, 
     var(--shire-gold) 50% ) 10;
     background-color: var(--mirkwood-green);
-    /*background-image: url("forest.jpg");
-    background-position: top;*/
-    width: 100%;
+    /*background-image: url("forest.jpg");*/
+    /*background-position: top;*/
+    width: calc((2120px - 120px) / 4);;
     height: calc((2120px - 120px) / 4);
     right: 0;
     top: 0;
-    /*border-radius: 100px;*/
+    border-radius: 50%;
     position: sticky;
     display: block;
     transition: .5s linear;

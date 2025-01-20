@@ -118,14 +118,14 @@ document.addEventListener("scroll", (event) => {
         console.log(window.scrollY);
         if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin - 100) { // compare scrollY to featureContainerTop
             //featureImgBg.style.backgroundPositionY = "40%"
-            //featureImgBg.style.backgroundColor = "lightpink"
+            featureImgBg.style.backgroundColor = "#2C5F2D"
 
             featureImages[0].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             console.log("img1");
             
         } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)+featureMargin*2 - 100) {
-            //featureImgBg.style.backgroundColor = "green"
+            featureImgBg.style.backgroundColor = "#234C24"
             //featureImgBg.style.backgroundPositionY = "45%"
 
             featureImages[1].classList.add("show-feature-img")
@@ -135,7 +135,7 @@ document.addEventListener("scroll", (event) => {
             console.log("img2")
 
         } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3 - 100) {
-            //featureImgBg.style.backgroundColor = "lightseagreen"
+            featureImgBg.style.backgroundColor = "#1A391B"
             //featureImgBg.style.backgroundPositionY = "50%"
 
             featureImages[2].classList.add("show-feature-img")
@@ -145,7 +145,7 @@ document.addEventListener("scroll", (event) => {
             console.log("img3")
 
         } else if (window.scrollY > featureContainerTop + (featureOffset*3 - 100)) {
-            //featureImgBg.style.backgroundColor = "lightcyan"
+            featureImgBg.style.backgroundColor = "#122612"
             //featureImgBg.style.backgroundPositionY = "55%"
 
             featureImages[3].classList.add("show-feature-img")
