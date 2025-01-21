@@ -558,7 +558,8 @@ div.feature:last-of-type {
 #feature-bg-column {
     /*border: 1px solid blue;*/
     width: 50%;
-    height: var(--feature-area-height);
+    /*height: var(--feature-area-height);*/
+    height: 100%;
     position: absolute;
     top: 0;
     right: 0;
@@ -1094,12 +1095,11 @@ label {
         }
     }
 
-    .widget-card {
-        height: 380px;
-    }
+
 
     #features {
-        height: 1200px;
+        height: 2300px;
+        border: 1px solid red;
     }
 
     .feature {
@@ -1114,6 +1114,10 @@ label {
             height: 100%;
             width: 100%;
         }
+    }
+
+    .widget-card {
+        height: 380px;
     }
 }
 

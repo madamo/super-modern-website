@@ -113,6 +113,10 @@ closeMenu.addEventListener("click", () => {
 // TO-DO: Exit images
 //COMMENT BACK IN FOR LAUNCH!!!!!
 document.addEventListener("scroll", (event) => {
+    if (viewport !== window.innerWidth) {
+        viewport = window.innerWidth;
+    }
+    
     if (viewport > 1084) {
         console.log(`viewport: ${viewport}`);
         console.log(window.scrollY);
