@@ -230,6 +230,8 @@ nav {
     background-size: 250% 250%, 50% 50%;
     
     transition: background-position 0s ease;
+
+    cursor: pointer;
 }
 
 .cta-primary:hover {
@@ -243,6 +245,7 @@ nav {
     background-color: white;
     border: 2px solid var(--cta-primary);
     transition: .2s linear;
+    cursor: pointer;
 }
 
 .cta-secondary:hover {
@@ -309,6 +312,11 @@ nav {
         width: 30%;
         font-size: 0.875rem;
         height: 2rem;
+        cursor: pointer;
+    }
+
+    #close-menu {
+        cursor: pointer;
     }
 
     nav {
@@ -355,7 +363,7 @@ nav {
         width: 100%;
         max-width: 800px;
         height: 500px;
-        padding: 0 0 0 10px;
+        /*padding: 0 0 0 10px;*/
         /*object-fit: cover;*/
 
         img {
@@ -1056,6 +1064,10 @@ label {
 - show nav, search, profile, primary CTA */
 
 @media (max-width: 1215px) {
+
+    body {
+        padding: 0 20px;
+    }
     #cta-2 {
         display: none;
     }
@@ -1099,7 +1111,6 @@ label {
 
     #features {
         height: 2300px;
-        border: 1px solid red;
     }
 
     .feature {
@@ -1289,7 +1300,6 @@ label {
 @media (max-width: 639px) {
     #filter-container {
 
-        border: 1px solid purple;
         min-width: 575px;
 
         .filter-chip {
