@@ -1,7 +1,7 @@
 :root {
     --cta-primary: var(--cool-cyan);
     --cta-hover: var(--ring-gold-light);
-    --font-color-primary: var(--mtn-grey);
+    --font-color-primary: var(--tech-gray);
     --icon-primary: grey;
     --feature-area-height: 3500px;
 
@@ -148,7 +148,7 @@ nav {
         min-width: 125px;
         vertical-align: middle;
         border-radius: 8px;
-        color: var(--font-color-primary);
+        /*color: var(--font-color-primary);*/
 
     }
 }
@@ -213,6 +213,7 @@ nav {
 .cta-primary {
     background-color: var(--cta-primary);
     border: 2px solid var(--cta-primary);
+    color: var(--white-smoke);
 
     background-repeat: no-repeat;
     background-position: -250px -250px;
