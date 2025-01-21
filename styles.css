@@ -1116,9 +1116,6 @@ label {
         }
     }
 
-    .widget-card {
-        height: 380px;
-    }
 }
 
 /* Breakpoint 2 < 1085px width
@@ -1255,8 +1252,8 @@ label {
 
 
     #filter-container {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        flex-wrap: wrap;
+        justify-content: center;
         overflow: scroll;
     }
 
@@ -1287,6 +1284,18 @@ label {
         display: none;
     }
 
+}
+
+@media (max-width: 639px) {
+    #filter-container {
+
+        border: 1px solid purple;
+        min-width: 575px;
+
+        .filter-chip {
+            margin: 0 2px;
+        }
+    }
 }
 
 
