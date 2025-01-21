@@ -7,6 +7,7 @@
 
     --body-text: Roboto, sans-serif;
     --header-text: Poppins, sans-serif;
+    --style-text: "Space Grotesk", serif;
 
     --side-padding: 20px;
 
@@ -46,34 +47,8 @@ White Smoke (#EDEDED): For cards, sections, or dividers.
 }
 
 /* Fonts */
-/* <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 900 */
 
-.cinzel {
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700 */
-
-.lora {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.uncial-antiqua-regular {
-    font-family: "Uncial Antiqua", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
   
-
-
 
 * {
     margin: 0;
@@ -86,8 +61,8 @@ html {
 }
 
 body {
-    border: 1px solid red;
-    font-family: Helvetica, Arial, sans-serif;
+    /*border: 1px solid red;*/
+    font-family: var(--body-text), Arial, sans-serif;
     padding: 20px 0 20px 0;
     max-width: 1280px;
     margin: 0 auto;
@@ -375,9 +350,18 @@ nav {
     }
 
     #hero-img-container {
-        background-color: lightgrey;
+        /*background-color: lightgrey;*/
+        width: 100%;
+        max-width: 800px;
         height: 500px;
         padding: 0 0 0 10px;
+        /*object-fit: cover;*/
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
     }
 
     #supporting-text {
@@ -488,6 +472,8 @@ nav {
     height: 500px;
     width: 50%;
     min-width: 520px;
+    position: sticky;
+    top: 0;
 
 
     .feature-text-container {
@@ -580,7 +566,7 @@ div.feature:last-of-type {
 }
 
 #feature-img-bg {
-    background-color: lightpink;
+    background-color: var(--bold-magenta);
     width: calc((2120px - 120px) / 4);
     height: calc((2120px - 120px) / 4);
     right: 0;
@@ -613,14 +599,15 @@ div.feature:last-of-type {
     justify-content: center;
     margin: 20px 0;
     padding: 20px;
-    position: sticky;
-    top: 0;
+    /*position: sticky;
+    top: 0;*/
     background-color: white;
 
     h2 {
         width: 100%;
         text-align: center;
         margin-bottom: 15px;
+        font-family: var(--header-text), sans-serif;
     }
 
     .filter-chip {
@@ -629,9 +616,10 @@ div.feature:last-of-type {
         width: 10%;
         min-width: 100px;
         height: 50px;
-        border: 1px solid black;
+        border: 1px solid var(--cool-cyan);
         border-radius: 35px;
         margin: 0 10px;
+        color: var(--tech-gray);
 
 
     }
@@ -646,14 +634,14 @@ input[type="radio"] {
 }
 
 input[type="radio"]:hover + label {
-    background-color: black;
+    background-color: var(--cool-cyan);
     color: white;
     border-radius: 35px;
 
 }
 
 input[type="radio"]:checked + label {
-    background-color: black;
+    background-color: var(--cool-cyan);
     color: white;
     border-radius: 35px;
 }
@@ -677,20 +665,23 @@ label {
     justify-content: center;
     width: 100%;
     padding: 0 20px;
+    overflow: scroll;
 }
 
 .widget-card {
     border: 1px solid lightgrey;
     border-radius: 10px;
+    max-width: 300px;
     width: 30%;
     min-width: 250px;
     height: 400px;
     box-shadow: 5px 5px 5px 0px rgba(232,232,232,1);
     margin: 10px;
+    /*transition: transform .1s linear;*/
 
 
     i {
-        color: grey;
+        color: var(--tech-gray);
         margin: 15px 0;
         font-size: 1.5rem;
         padding-left: 10px;
@@ -708,15 +699,22 @@ label {
 
     .learn-more {
         padding-left: 10px;
-        margin: 15px 0;
+        margin: 10px 0;
         color: black;
         text-decoration: none;
+        display: inline-block;
     }
-
+    
     .learn-more:hover {
         text-decoration: underline;
     }
 }
+
+/*.widget-card:hover {
+    transform: scale(1.1, 1.1);
+}*/
+
+
 
 .filtered {
     /*display: none;*/
@@ -751,7 +749,7 @@ label {
 #testimonials {
     margin-top: 80px;
     padding: 20px;
-    background-color: lightblue;
+    background-color: var(--soft-pink);
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(12, 1fr);
@@ -777,6 +775,8 @@ label {
 .main-quote {
     font-size: 4rem;
     font-weight: 500;
+    font-family: var(--style-text);
+
 }
 
 .testimonial-cta {
@@ -785,7 +785,10 @@ label {
     height: 60px;
     font-size: 1.25rem;
     border-radius: 20px;
-    border: 2px solid yellow;
+    border: 5px solid var(--elec-purple);
+    background-color: white;
+    margin: 10px 0;
+    cursor: pointer;
 }
 
 .quote-card {
@@ -815,7 +818,14 @@ label {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: wheat;
+        background-color: var(--elec-purple);
+        color: white;
+        cursor: pointer;
+        transition: transform .1s linear;
+    }
+
+    .more-arrow:hover {
+        transform: scale(1.1, 1.1);
     }
 }
 
@@ -824,12 +834,15 @@ label {
     
     img {
         width: 100%;
+        transform: scaleX(-1);
     }
 
 }
 
 .testimonial-img2 {
     grid-area: c;
+    /*background-color: var(--light-gray);
+    clip-path: circle(30%);*/
 
     img {
         width: 100%;
@@ -842,6 +855,7 @@ label {
     .long-quote {
         font-size: 1.8rem;
         font-weight: 300;
+        font-family: var(--style-text), serif;
     }
 
     .attr-name {
@@ -888,6 +902,7 @@ label {
 
     img {
         width: 100%;
+        transform: scaleX(-1);
     }
 
 }
@@ -895,10 +910,12 @@ label {
 /* Footer */
 
 #footer {
-    border: 1px solid red;
+    /*border: 1px solid red;*/
+    border-top: 5px solid var(--bold-magenta);
 
     margin-top: 80px;
     padding: 20px 20px 0 20px;
+
 
     .footer-links {
         display: grid;
@@ -911,8 +928,17 @@ label {
 
         li {
             display: block;
+            margin: 5px 0;
         }
+    }
 
+    a {
+        color: var(--tech-gray);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 
 
@@ -931,6 +957,7 @@ label {
     #socials i {
         margin: 0 5px;
         font-size: 1.3rem;
+        cursor: pointer;
     }
 
     li {
@@ -948,7 +975,20 @@ label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 40px 0 0 0;
+
+    #copyright {
+        text-align: right;
+
+        p {
+            padding: 2px 0;
+        }
+    }
+
+    .thanks {
+        font-size: 0.75rem;
+    }
 }
 
 

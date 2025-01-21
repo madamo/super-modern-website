@@ -27,50 +27,50 @@ const filterChips = document.getElementsByClassName("filter-chip");
 // Create widget data
 const widgets = [
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=3628ed72497c3380a9d8ed5b28324b4e",
         icon: "fa-solid fa-face-smile",
         desc: "Here's what the card says: ONE",
         tag: "smiles"
         
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=9e88b00d558613df9b31e2d3782244c3",
         icon: "fa-solid fa-face-smile",
         desc: "Here's what the card says: ONE",
         tag: "smiles"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=533d71e7733d1ad05ecdc25051eed663",
         icon: "fa-solid fa-mug-hot",
         desc: "Here's what the card says: TWO",
         tag: "coffee"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=2e12c586a431bea0edc62934cd35b054",
         icon: "fa-solid fa-mug-hot",
         desc: "Here's what the card says: TWO",
         tag: "coffee"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=08cd64ca3f7dc2ed6292d15bdd6d42c2",
         icon: "fa-solid fa-lemon",
         desc: "Here's what the card says: THREE",
         tag: "lemons"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=d298131eb7322b7002e6fd50e9dd8c41",
         icon: "fa-solid fa-lemon",
         desc: "Here's what the card says: THREE",
         tag: "lemons"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=4dd5fd75c6118b7161fca2ffd991842a",
         icon: "fa-solid fa-lemon",
         desc: "Here's what the card says: THREE",
         tag: "lemons"
     },
     {
-        img: "https://fakeimg.pl/600x400?text=Image+4&font=noto",
+        img: "https://doodleipsum.com/700x525/abstract?i=2950d197771be2105d7d9a91975907bc",
         icon: "fa-solid fa-snowflake",
         desc: "Here's what the card says: FOUR",
         tag: "snow"
@@ -117,13 +117,13 @@ document.addEventListener("scroll", (event) => {
         console.log(`viewport: ${viewport}`);
         console.log(window.scrollY);
         if (window.scrollY > featureContainerTop && window.scrollY < featureContainerTop + featureOffset + featureMargin - 100) { // compare scrollY to featureContainerTop
-            featureImgBg.style.backgroundPosition = "lightpink"
+            featureImgBg.style.backgroundColor = "#FF006E"
             featureImages[0].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             console.log("img1");
             
         } else if (window.scrollY > featureContainerTop + featureOffset && window.scrollY < featureContainerTop + (featureOffset*2)+featureMargin*2 - 100) {
-            featureImgBg.style.backgroundColor = "green"
+            featureImgBg.style.backgroundColor = "#9400D3"
             featureImages[1].classList.add("show-feature-img")
             featureImages[0].classList.remove("show-feature-img")
             featureImages[2].classList.remove("show-feature-img")
@@ -131,7 +131,7 @@ document.addEventListener("scroll", (event) => {
             console.log("img2")
 
         } else if (window.scrollY > featureContainerTop + (featureOffset*2) && window.scrollY < featureContainerTop + (featureOffset*3)+featureMargin *3 - 100) {
-            featureImgBg.style.backgroundColor = "lightseagreen"
+            featureImgBg.style.backgroundColor = "#FFC1E3"
             featureImages[2].classList.add("show-feature-img")
             featureImages[1].classList.remove("show-feature-img")
             featureImages[3].classList.remove("show-feature-img")
@@ -139,7 +139,7 @@ document.addEventListener("scroll", (event) => {
             console.log("img3")
 
         } else if (window.scrollY > featureContainerTop + (featureOffset*3 - 100)) {
-            featureImgBg.style.backgroundColor = "lightcyan"
+            featureImgBg.style.backgroundColor = "#FFD43D"
             featureImages[3].classList.add("show-feature-img")
             featureImages[2].classList.remove("show-feature-img")
 
