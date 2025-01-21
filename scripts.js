@@ -150,19 +150,6 @@ document.addEventListener("scroll", (event) => {
             console.log("img4")
 
         }
-
-      /*  if (window.scrollY > 1260) {
-            featureImages[0].classList.add("exit-img");
-            //featureImages[0].style.opacity = "0";
-        }
-
-        if (window.scrollY > 2160) {
-            featureImages[1].classList.add("exit-img");
-        }
-
-        if (window.scrollY > 3050) {
-            featureImages[2].classList.add("exit-img");
-        }*/
     }
 })
 
@@ -218,20 +205,3 @@ widgetContainer.addEventListener("animationend", (event) => {
     }
     widgetContainer.classList.remove("filter-in");
 })
-
-/*featureImages[0].addEventListener("animationend", (event) => {
-    console.log(event.animationName)
-
-    if (event.animationName !== "exit-img") {
-        return;
-    }
-    featureImages[0].classList.remove("exit-img");
-})*/
-
-
-//console.log(featureImages);
-
-/*featureContainer.addEventListener("scroll", (event) => {
-    //alert("scrolling!");
-    console.log(featureContainer.scrollTop);
-})*/

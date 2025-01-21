@@ -5,11 +5,15 @@
     --icon-primary: grey;
     --feature-area-height: 3500px;
 
+    /* Fonts */
+
     --body-text: Roboto, sans-serif;
     --header-text: Poppins, sans-serif;
     --style-text: "Space Grotesk", serif;
 
     --side-padding: 20px;
+
+    /* Colors */
 
     --bold-magenta: #FF006E;
     --tech-gray: #333333;
@@ -19,36 +23,10 @@
     --light-gray: #F5F5F5;
     --white-smoke: #EDEDED;
 
-
-
-    /*Body Text: Use Lora in "Mountain Grey" for readability on light backgrounds or "Elven Silver" on dark backgrounds.
-Backgrounds: Employ gradients or textures combining "Mirkwood Green" and "Mountain Grey" for a grounded fantasy feel.
-Buttons and Highlights: Use "Shire Gold" or "Ring Gold" to draw attention to calls-to-action. */
-    /* Colors */
- /* Color Palette
-
- Primary Color:
-
-Bold Magenta (#FF006E): The core brand color, vibrant and energetic, representing creativity and innovation.
-Secondary Colors:
-
-Tech Gray (#333333): A sleek, modern dark gray for text and contrasting elements.
-Cool Cyan (#00BFFF): A bright cyan for accents and interactive elements like buttons or highlights.
-Accent Colors:
-
-Electric Purple (#9400D3): A complementary purple to add depth and variety.
-Soft Pink (#FFC1E3): A lighter magenta-inspired shade for subtle backgrounds or highlights.
-Neutral Colors:
-
-Light Gray (#F5F5F5): A clean, neutral background color.
-White Smoke (#EDEDED): For cards, sections, or dividers.
-*/
-
 }
 
-/* Fonts */
 
-  
+
 
 * {
     margin: 0;
@@ -252,31 +230,6 @@ nav {
     border: 4px solid var(--cta-primary);
 }
 
-/* Shine Effect */
-/*.cta-primary {
-    background-repeat: no-repeat;
-    background-position: -120px -120px, 0 0;
-    
-    background-image: linear-gradient(
-      0 0,
-      rgba(255, 255, 255, 0.2) 0%,
-      rgba(255, 255, 255, 0.2) 37%,
-      rgba(255, 255, 255, 0.8) 45%,
-      rgba(255, 255, 255, 0.0) 50%
-    );
-    
-    background-size: 250% 250%, 100% 100%;
-    
-    transition: background-position 0s ease;
-  } 
-  
-  .button.two:hover {
-    background-position: 0 0, 0 0;
-    
-    transition-duration: 0.5s;
-  } */
-
-
 
 .action-btn {
     border: none;
@@ -432,7 +385,7 @@ nav {
     
 }
 
-/*#logo-wall:before {
+/*#logo-wall:before { /* if we want some sort of border at the edge
     position: absolute;
     top: 0;
     left: 0;
@@ -505,17 +458,6 @@ div.feature:last-of-type {
     margin-bottom: 0;
 }
 
-
-/*#feature-img-column {
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 400px;
-    top: 20px;
-    overflow: hidden; */
-
 .feature-img-container {
     /*border: 1px solid green;*/
     width: 50%;
@@ -530,7 +472,6 @@ div.feature:last-of-type {
 .feature-img {
    /* border: 1px solid black;*/
     position: sticky;
-    /*top: calc(50% - 220px);*/
     top: 0;
     width: 80%;
     height: 500px;
@@ -558,21 +499,19 @@ div.feature:last-of-type {
     animation: enter-img .4s ease-out;
 }
 
-.exit-img {
-    /*animation: exit-img .2s ease-in forwards;*/
+/*.exit-img {
+    /*animation: exit-img .2s ease-in forwards;
     opacity: 0;
-}
+} */
 
 #feature-bg-column {
     /*border: 1px solid blue;*/
     width: 50%;
-    /*height: var(--feature-area-height);*/
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
     padding-left: 100px;
-    /*padding-top: 50px;*/
 }
 
 #feature-img-bg {
@@ -720,11 +659,6 @@ label {
     }
 }
 
-/*.widget-card:hover {
-    transform: scale(1.1, 1.1);
-}*/
-
-
 
 .filtered {
     /*display: none;*/
@@ -851,8 +785,6 @@ label {
 
 .testimonial-img2 {
     grid-area: c;
-    /*background-color: var(--light-gray);
-    clip-path: circle(30%);*/
 
     img {
         width: 100%;
