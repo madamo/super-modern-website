@@ -1227,6 +1227,43 @@ label {
         display: none;
     }
 
+    #footer .footer-links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        ul {
+            width: 80%;
+            display: block;
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+
+    #footer-connect-links {
+        display: flex;
+        flex-direction: column;
+
+        #corp-links {
+            margin-top: 20px;
+            padding-left: 0px;
+
+            ul li {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .thanks {
+        width: 70%;
+        text-align: right;
+        margin-left: 30%;
+    }
+
 }
 
 @media (max-width: 639px) {
